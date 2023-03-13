@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="keywords" content="app, landing, corporate, Creative, Html Template, Template">
+    <meta name="author" content="web-themes">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- title -->
+    <title>Product details page</title>
+
+    <!-- favicon -->
+    <!-- <link href="img/favicon.png" type="image/png" rel="icon"> -->
+
+    <!-- all css here -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="css/fontawesome.min.css" rel="stylesheet" type="text/css" />
+    <link href="css/slick.css" rel="stylesheet" type="text/css" />
+    <link href="css/jquery.nice-number.css" rel="stylesheet" type="text/css" />
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+
+    <!-- product area start -->
+    <div class="product-wrapper">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="product-box">
+                        <div class="product-big-active">
+                            <img class="img-fluid" src="img/single-product1.png" alt="">
+                            <img class="img-fluid" src="img/single-product2.png" alt="">
+                            <img class="img-fluid" src="img/single-product3.png" alt="">
+                            <img class="img-fluid" src="img/single-product1.png" alt="">
+                        </div>
+                        <div class="product-small-active">
+                            <img class="img-fluid" src="img/single-product1.png" alt="">
+                            <img class="img-fluid" src="img/single-product2.png" alt="">
+                            <img class="img-fluid" src="img/single-product3.png" alt="">
+                            <img class="img-fluid" src="img/single-product1.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="product-content">
+                        <h2>Taddy and Rose</h2>
+                        <div>
+                            <div class="d-flex align-items-center">
+                                <div class="star-icon">
+                                    <a href="#"><i class="fas fa-star"></i></a>
+                                    <a href="#"><i class="fas fa-star"></i></a>
+                                    <a href="#"><i class="fas fa-star"></i></a>
+                                    <a href="#"><i class="fas fa-star"></i></a>
+                                    <a href="#"><i class="fas fa-star"></i></a>
+                                </div>
+                                <p class="custom-review"><a href="#">1 customer review</a><a href="#">Add a review</a></p>
+                            </div>
+                            
+                            <h3>$492.00 <span>$379.00</span> </h3>
+                            <p class="custom-para">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+                            <div class="color-text d-flex align-items-center">
+                                <p>Color:</p>
+                                <div>
+                                    <a class="color color-one" href="#"></a>
+                                    <a class="color color-two" href="#"></a>
+                                    <a class="color color-three" href="#"></a>
+                                    <a class="color color-four" href="#"></a>
+                                </div>
+                            </div>
+                            <p class="custom-para">Categories: <span>Rings</span> </p>
+                            <p class="custom-para">Tag: <a href="#">Rings</a>, <a href="#">Gift, Girl</a></p>
+                            <div class="product-spinner">
+                                <input value="2" type="number" name="">
+                                <a class="make-btn" href="#">Add To Cart</a>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <p class="custom-para">Share: </p>
+                                <div class="social-icon">
+                                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                    <a href="#"><i class="fab fa-google"></i></a>
+                                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                    <a href="#"><i class="fab fa-twitter"></i></a>
+                                    <a href="#"><i class="fab fa-skype"></i></a>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- product area end -->
+
+
+    
+    <!-- all js here -->
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/jquery.nice-number.js"></script>
+    <script>
+        
+        $('.product-big-active').slick({
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          arrows: false,
+          asNavFor: '.product-small-active',
+          arrows: true,
+          autoplaySpeed: 3000,
+          prevArrow:'<button type="button" class="slick-prev"><i class="far fa-arrow-left"></i></button>',
+          nextArrow:'<button type="button" class="slick-next"><i class="far fa-arrow-right"></i></button>',
+        });
+        $('.product-small-active').slick({
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          asNavFor: '.product-big-active',
+          dots: false,
+          centerMode: true,
+          focusOnSelect: true,
+          arrows: false,
+        });
+
+        // product counter start
+        $(function(){
+            $('.product-spinner input[type="number"]').niceNumber();
+         });
+
+    </script>
+</body>
+</html>
